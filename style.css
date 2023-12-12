@@ -1,0 +1,109 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-shadow: border-box;
+}
+
+
+ul {
+	list-style: none;
+
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.6;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.grid{
+	display: grid;
+}
+
+.grid--1x2 {
+	grid-template-columns: repeat(2, minmax(auto, 1fr));
+}
+
+.grid--1x3 {
+	grid-template-columns: repeat(3, minmax(auto, 1fr));
+}
+
+.btn {
+	display: inline-block;
+	border: 0;
+	background: 0;
+	padding: 1em 1.5em;
+	font-size: 1.125rem;
+	font-weight: 700;
+	transition: 250ms;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2.5rem;
+}
+
+.flow-content--s > * + *  {
+	margin-top: .5rem !important;
+}
+.flow-content--m > * + *  {
+	margin-top: 1rem !important;
+}
+.flow-content--xm > * + *  {
+	margin-top: 1.5rem !important;
+}
+.flow-content--l > * + *  {
+	margin-top: 3rem !important;
+}
+.flow-content--xl > * + *  {
+	margin-top: 3.5rem !important;
+}
+
+.contents-wrpper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.meme-generator{
+    color: crimson;
+    background: #ddd;
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+    transition: transform 250ms;
+    border-radius: 10px;
+
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.125);
+    }
+}
+
+.meme-img{
+    height: 450px;
+    object-fit: cover;   
+}
+
+.meme-title{
+    font-size: .8rem;
+}
+
+@media  (max-width: 34.375em) {
+    html{
+        font-size: .7rem;
+    }
+
+    .meme-img{
+        height: 250px;
+    }
+}
